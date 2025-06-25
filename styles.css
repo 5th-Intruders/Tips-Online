@@ -1,23 +1,23 @@
-/* Modern Purple & Teal Color Scheme */
+/* Modern Blue Color Scheme */
 :root {
-    --primary-bg: #0F0F23;
-    --secondary-bg: #1A1A3A;
-    --card-bg: #262659;
-    --accent-purple: #8B5CF6;
-    --accent-teal: #14B8A6;
-    --accent-pink: #EC4899;
-    --accent-orange: #F59E0B;
-    --accent-green: #10B981;
-    --text-primary: #F8FAFC;
-    --text-secondary: #CBD5E1;
-    --text-muted: #94A3B8;
-    --border-color: #334155;
-    --success-bg: #064E3B;
-    --success-text: #6EE7B7;
-    --error-bg: #7F1D1D;
-    --error-text: #FCA5A5;
-    --warning-bg: #78350F;
-    --warning-text: #FCD34D;
+    --primary-bg: #0f172a;
+    --secondary-bg: #1e293b;
+    --card-bg: #334155;
+    --accent-blue: #3b82f6;
+    --accent-teal: #0ea5e9;
+    --accent-indigo: #6366f1;
+    --accent-orange: #f59e0b;
+    --accent-green: #10b981;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --border-color: #475569;
+    --success-bg: #064e3b;
+    --success-text: #6ee7b7;
+    --error-bg: #7f1d1d;
+    --error-text: #fca5a5;
+    --warning-bg: #78350f;
+    --warning-text: #fcd34d;
 }
 
 * {
@@ -61,7 +61,7 @@ body {
 }
 
 .header h1 i {
-    color: var(--accent-purple);
+    color: var(--accent-blue);
     width: 40px;
     height: 40px;
 }
@@ -88,7 +88,7 @@ body {
 }
 
 .btn {
-    background: linear-gradient(135deg, var(--accent-purple), #A855F7);
+    background: linear-gradient(135deg, var(--accent-blue), #2563eb);
     color: white;
     border: none;
     padding: 12px 24px;
@@ -101,12 +101,12 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
 }
 
 .btn:disabled {
@@ -117,12 +117,12 @@ body {
 }
 
 .btn-secondary {
-    background: linear-gradient(135deg, var(--accent-teal), #0F766E);
-    box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3);
+    background: linear-gradient(135deg, var(--accent-teal), #0284c7);
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
 }
 
 .btn-secondary:hover {
-    box-shadow: 0 8px 25px rgba(20, 184, 166, 0.4);
+    box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4);
 }
 
 .btn-success {
@@ -135,12 +135,12 @@ body {
 }
 
 .btn-danger {
-    background: linear-gradient(135deg, var(--accent-pink), #BE185D);
-    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+    background: linear-gradient(135deg, var(--accent-indigo), #4f46e5);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
 }
 
 .btn-danger:hover {
-    box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
 }
 
 .btn i {
@@ -172,7 +172,7 @@ body {
 .status.error {
     background: var(--error-bg);
     color: var(--error-text);
-    border-color: var(--accent-pink);
+    border-color: var(--accent-indigo);
 }
 
 .schedule-container {
@@ -231,8 +231,8 @@ body {
 }
 
 .time-slot.study {
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(139, 92, 246, 0.05));
-    border-left-color: var(--accent-purple);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
+    border-left-color: var(--accent-blue);
 }
 
 .time-slot.art {
@@ -246,13 +246,18 @@ body {
 }
 
 .time-slot.school {
-    background: linear-gradient(135deg, rgba(20, 184, 166, 0.1), rgba(20, 184, 166, 0.05));
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(14, 165, 233, 0.05));
     border-left-color: var(--accent-teal);
 }
 
 .time-slot.free {
     background: linear-gradient(135deg, rgba(148, 163, 184, 0.1), rgba(148, 163, 184, 0.05));
     border-left-color: var(--text-muted);
+}
+
+.time-slot.gaming {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(99, 102, 241, 0.05));
+    border-left-color: var(--accent-indigo);
 }
 
 .time-info {
@@ -311,7 +316,7 @@ body {
 }
 
 .stat-card i {
-    color: var(--accent-purple);
+    color: var(--accent-blue);
     width: 24px;
     height: 24px;
     margin-bottom: 10px;
@@ -338,7 +343,7 @@ body {
 .no-schedule .large-icon {
     width: 64px;
     height: 64px;
-    color: var(--accent-purple);
+    color: var(--accent-blue);
     margin-bottom: 20px;
 }
 
@@ -368,6 +373,91 @@ body {
     100% { transform: rotate(360deg); }
 }
 
+/* Calendar Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+    width: 90%;
+    max-width: 500px;
+}
+
+.close {
+    color: var(--text-secondary);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: var(--text-primary);
+}
+
+.modal-content h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.calendar-header {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    color: var(--text-secondary);
+}
+
+.calendar-day {
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.calendar-day:hover {
+    background-color: rgba(59, 130, 246, 0.2);
+}
+
+.calendar-day.has-schedule {
+    background-color: rgba(59, 130, 246, 0.3);
+    font-weight: bold;
+}
+
+.calendar-day.selected {
+    background-color: var(--accent-blue);
+    color: white;
+}
+
+.calendar-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
@@ -392,6 +482,11 @@ body {
     .stats {
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -410,5 +505,10 @@ body {
     .stats {
         grid-template-columns: 1fr;
         padding: 0 20px 20px;
+    }
+    
+    .calendar-day {
+        padding: 8px;
+        font-size: 0.9rem;
     }
 }
