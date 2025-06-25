@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Daily Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <!-- Firebase SDK -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.23.0/firebase-app-compat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.23.0/firebase-firestore-compat.min.js"></script>
+    <!-- html2canvas for PNG download -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i data-lucide="calendar-days"></i> Daily Planner</h1>
+            <p>Simple scheduling with study, art, and anime time</p>
+        </div>
+
+        <div class="controls">
+            <div class="button-group">
+                <button class="btn" onclick="generateSchedule()" id="generateBtn">
+                    <i data-lucide="shuffle"></i>
+                    Generate Schedule
+                </button>
+                <button class="btn btn-success" onclick="saveToFirebase()" id="saveBtn" disabled>
+                    <i data-lucide="save"></i>
+                    Save Schedule
+                </button>
+                <button class="btn btn-secondary" onclick="loadPreviousPlans()" id="loadBtn">
+                    <i data-lucide="history"></i>
+                    Load Previous Plans
+                </button>
+                <button class="btn btn-danger" onclick="downloadSchedule()" id="downloadBtn" disabled>
+                    <i data-lucide="download"></i>
+                    Download PNG
+                </button>
+            </div>
+        </div>
+
+        <div id="statusMessage"></div>
+
+        <div class="schedule-container" id="scheduleContainer">
+            <div class="schedule-header">
+                <h2><i data-lucide="clock"></i> Today's Schedule</h2>
+                <div class="schedule-date" id="scheduleDate"></div>
+            </div>
+            
+            <div class="schedule-content" id="scheduleContent">
+                <div class="no-schedule">
+                    <i data-lucide="calendar-plus" class="large-icon"></i>
+                    <h3>Ready to plan your day?</h3>
+                    <p>Click "Generate Schedule" to create your personalized daily plan!</p>
+                </div>
+            </div>
+
+            <div class="stats" id="stats" style="display: none;">
+                <div class="stat-card">
+                    <i data-lucide="book-open"></i>
+                    <h3 id="studyTime">0h</h3>
+                    <p>Study Time</p>
+                </div>
+                <div class="stat-card">
+                    <i data-lucide="palette"></i>
+                    <h3 id="artTime">0h</h3>
+                    <p>Art Time</p>
+                </div>
+                <div class="stat-card">
+                    <i data-lucide="tv"></i>
+                    <h3 id="animeTime">0h</h3>
+                    <p>Anime Time</p>
+                </div>
+                <div class="stat-card">
+                    <i data-lucide="monitor"></i>
+                    <h3 id="screenTime">0h</h3>
+                    <p>Screen Time</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons after page load
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
